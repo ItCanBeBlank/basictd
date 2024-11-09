@@ -16,11 +16,9 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	enemy_in_range.append(body)
-	print(enemy_in_range)
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	enemy_in_range.erase(body)
-	print(enemy_in_range)
 
 func attack():
 	if enemy_in_range.size() != 0:
@@ -28,6 +26,7 @@ func attack():
 			attack_ready = false
 			var target_position = enemy_in_range[0].global_position
 			var projectile = Globals.BASIC_PROJECTILE.instantiate()
+			projectile.target = target_position
 			add_child(projectile)
 			attack_cooldown_timer.start()
 
