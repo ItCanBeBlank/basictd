@@ -3,6 +3,7 @@ extends CharacterBody2D
 var speed: float = 100
 var accel = 10
 var target 
+var damage = 5
 
 @onready var navigation_agent_2d: NavigationAgent2D = $NavigationAgent2D
 
