@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhxa7xs75p05n"]
+
+[ext_resource type="Script" path="res://scenes/enemy/clump.gd" id="1_hxgrd"]
+[ext_resource type="Texture2D" uid="uid://bh2ln1xuxp1wq" path="res://icon.svg" id="1_uifxh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8oi6h"]
+size = Vector2(32, 32)
+
+[node name="Clump" type="CharacterBody2D"]
+script = ExtResource("1_hxgrd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_uifxh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8oi6h")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]

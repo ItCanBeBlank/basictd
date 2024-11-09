@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://bm21x2ivffm5e"]
+[gd_scene load_steps=10 format=4 uid="uid://bm21x2ivffm5e"]
 
 [ext_resource type="Texture2D" uid="uid://ca4x7nvh1enhn" path="res://assets/tiles/normal_tile.png" id="1_gjcih"]
 [ext_resource type="Texture2D" uid="uid://bx1wsysjc72bo" path="res://assets/tiles/monster_path_tile.png" id="2_8vs84"]
+[ext_resource type="PackedScene" uid="uid://bhxa7xs75p05n" path="res://scenes/enemy/clump.tscn" id="3_wdjvx"]
+[ext_resource type="PackedScene" uid="uid://bgyjcqxgci527" path="res://scenes/player_base/player_base.tscn" id="4_6gjlv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tuae7"]
 texture = ExtResource("1_gjcih")
@@ -36,3 +38,13 @@ tile_set = SubResource("TileSet_f52ll")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="Level"]
 navigation_polygon = SubResource("NavigationPolygon_cmrhf")
+
+[node name="Clump" parent="." instance=ExtResource("3_wdjvx")]
+position = Vector2(32, 57)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(158, 158)
+zoom = Vector2(2, 2)
+
+[node name="PlayerBase" parent="." instance=ExtResource("4_6gjlv")]
+position = Vector2(284, 278)
