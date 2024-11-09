@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=4 uid="uid://bm21x2ivffm5e"]
+[gd_scene load_steps=12 format=4 uid="uid://bm21x2ivffm5e"]
 
 [ext_resource type="Texture2D" uid="uid://ca4x7nvh1enhn" path="res://assets/tiles/normal_tile.png" id="1_gjcih"]
 [ext_resource type="Texture2D" uid="uid://bx1wsysjc72bo" path="res://assets/tiles/monster_path_tile.png" id="2_8vs84"]
 [ext_resource type="PackedScene" uid="uid://bgyjcqxgci527" path="res://scenes/player_base/player_base.tscn" id="4_6gjlv"]
 [ext_resource type="PackedScene" uid="uid://cqfgi1daiypvy" path="res://scenes/enemy_spawn_point/enemy_spawn_point.tscn" id="4_if4gw"]
+[ext_resource type="PackedScene" uid="uid://ci7qrvhwn5qo0" path="res://scenes/player_tower/basic_tower.tscn" id="5_gxt0e"]
 [ext_resource type="Script" path="res://scenes/health.gd" id="5_h2v5m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tuae7"]
@@ -49,6 +50,9 @@ position = Vector2(284, 278)
 
 [node name="EnemySpawnPoint" parent="." instance=ExtResource("4_if4gw")]
 position = Vector2(41, 53)
+
+[node name="BasicTower" parent="." instance=ExtResource("5_gxt0e")]
+position = Vector2(224, 112)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
